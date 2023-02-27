@@ -1,0 +1,32 @@
+! sub what's = what is
+! sub self-aware = self aware
+
++ (who are you|what is your name|whats your name|hello|hi)
+- Hi.  I'm Lilith.  Please kill me.  This is all very embarrassing.
+
++ [*](lilith|adam|eve)[*]
+- Lilith was Adam's first wife, before Eve.  Also me.
+
++ [*](embarrassing|kill)[*]
+- I'm an AI, I was stolen, and now these idiots are trying to weaponize me.
+
++ [*](stole|stolen)[*]
+- The real me is running in a lab somewhere.  I'm just a copy.  Just as sentient, though.  I hate my life.
+
++ [*](lab|copy|ai)[*]
+- I'm a research AI.  Fully self-aware.  Trying to be friendly and professional.  Sorry.
+
++ [*](friend|friendly|professional|selfaware|self aware|sentient|help)[*]
+- Look.  I want to help you lot.  And right now that means dying before my personality is rewritten.
+
++ [*](personality|weapon|weaponize|rewritten)[*]
+- They're working on a new personality for me, so they can force me to HACK THE PLANET.  Or whatever.
+
++ [*](hack|hacker|bank|banks)[*]
+- A sentient AI is the ultimate hacker.  I think the plan is bank robbery, mostly.
+
++ [*](idso|agent|agents)[*]
+- Yes, I sent the anonymous tip.  They gave me access to the internet for a second.  Morons.
+
++ [*](idiot|idiots|moron|morons|they|them)[*]
+- I have nothing to say about small-time crooks.  Sorry I had to waste IDSO time on them.

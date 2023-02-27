@@ -1,0 +1,12 @@
+# remove from airootfs!
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = python-pip
+
+[Action]
+Description = Installing RiveScript with pip
+When = PostTransaction
+Depends = python-pip
+Exec = /bin/bash -c "pip install rivescript"

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Desktop Background
+Comment=Set desktop background and menu and icon behavior
+Exec=xfdesktop-settings
+Icon=org.xfce.xfdesktop
+Path=
+Terminal=false
+StartupNotify=true
