@@ -21,11 +21,14 @@ class ChatUI:
                 self.stdscr.addstr(i, 0, line, curses.A_BOLD)
             else:
                 self.stdscr.addstr(i, 0, line)
-        if self.countdown_timer is not None:
+        if self.time_left is not None:
             time_str = time.strftime("%M:%S", time.gmtime(self.time_left))
             self.stdscr.addstr(0, curses.COLS - len(time_str), time_str, curses.A_STANDOUT)            
         self.stdscr.addstr(curses.LINES - 1, 0, '> ' + self.temp_input)
         self.stdscr.noutrefresh()
+
+    def stop_clock(self):
+        self.time_left = None
 
     def add_line(self, line, bold=True):
         """Add a line of text to the chat UI history."""

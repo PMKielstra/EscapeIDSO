@@ -1,20 +1,20 @@
-import instances
+from instances import get_instance
 from hacktoolchat import HacktoolChatbot
-from chatui import UI
+from chatui import ChatUI
 
 def run():
     ip = input("Enter IP address: ")
-    if ip not in instances:
-        return
+    instance = get_instance(ip)
+    if not instance: return
 
-    time = instances[ip].time
-    msgs = instances[ip].msgs
-    sols = instances[ip].sols
-    final_lines = instances[ip].final_lines
+    time = instance.time
+    msgs = instance.msgs
+    sols = instance.sols
+    final_lines = instance.final_lines
 
     chatbot = HacktoolChatbot(msgs, sols, final_lines)
     ui = ChatUI(chatbot.start, chatbot.respond, countdown_timer=time)
-    chatbot.link_say(ui.say)
+    chatbot.link(ui.add_line, ui.stop_clock)
 
     ui.start()
 
