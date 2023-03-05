@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Photo quiz
+Comment=Take the quiz for the aerial photo
+Exec=xfce4-terminal -e "python3 /home/carol/quiz/quiz.py"
+Icon=
+Path=
+Terminal=false
+StartupNotify=false

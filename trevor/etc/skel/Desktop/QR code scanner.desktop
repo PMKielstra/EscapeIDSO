@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=QtQR
+Comment=Scan QR codes
+Exec=qtqr %F
+Icon=qtqr
+Path=
+Terminal=false
+StartupNotify=false

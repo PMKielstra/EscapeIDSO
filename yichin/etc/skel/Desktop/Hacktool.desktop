@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Hacktool
+Comment=Hack remote computers
+Exec=xfce4-terminal -e "python3 /home/yichin/hacktool/hacktool.py"
+Icon=utilities-terminal
+Path=
+Terminal=false
+StartupNotify=false

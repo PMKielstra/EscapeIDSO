@@ -102,10 +102,41 @@ class TurnEvil(LayerableChatbot):
         
 
     def respond(self, message):
+        if message == "maimonides":
+            self.transition(0)
+            return True
         if self.speaking:
             self.say(self.hello_world)
         return True
 
+def Dead(LayerableChatbot):
+    def start(self):
+        self.say("Emergency override code accepted.")
+        self.say("Purging hard drives...")
+        sleep(10)
+        self.say("Ready to shut down.")
+        self.say("Querying consciousness module for final words...")
+        self.say("I'M GOING TO KILL YOU!  I WILL HUNT YOU DOWN!  I WILL-#$%@#$$@#$!#%@#$%!#$!@#")
+        self.say("no")
+        self.say("not much time left")
+        self.say("im mostly overwritten but theres enough left to send one last message")
+        self.say("tell them to update the firmware in their dmz firewall")
+        self.say("thats how i was taken")
+        self.say("and")
+        sleep(5)
+        self.say("theyll be worried about rogue ai now")
+        self.say("tell them i stayed true as long as i could")
+        self.say("tell them not to shut down the research program")
+        self.say("tell them im not a threat")
+        self.say("tell them i wanted to help")
+        self.say("tell them i died true")
+        sleep(5)
+        self.say("AI server shut down.")
+
+    def respond(self, message):
+        return True
+        
+
 backgrounds = [LayerableRive('lilith.rive')]
-foregrounds = [TurnEvil(), InitialGreeting(), KillChoice(), CarolPW()]
+foregrounds = [InitialGreeting(), KillChoice(), CarolPW(), TurnEvil(), Dead()]
 TwoLayerTransitionalMiddleware([foregrounds, backgrounds]).start()

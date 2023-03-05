@@ -1,0 +1,10 @@
+there are three numbers in the master key
+
+i have the first one
+i stored it on a remote server at 192.168.2.32
+hack it
+
+trevor has the second one
+
+carol has the third
+
