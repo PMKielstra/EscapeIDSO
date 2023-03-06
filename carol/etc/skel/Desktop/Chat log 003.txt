@@ -12,6 +12,6 @@ CAROL: so use our new code
 TREVOR: 4\2 8\0 6\0 8\1 2\1 2\0 3\0
 TREVOR: all lowercase
 YICHIN: youre right that i can see these
-YICHIN: im changing my password right after we go for lunch
+YICHIN: im super mad in case you dont know
 YICHIN: and i guessed your code right away
 YICHIN: get rekt 5\2 8\0 8\0 4\2 1\1

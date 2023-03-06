@@ -1,6 +1,6 @@
 # Technical Instructions
 
-The escape room is made up of software that runs on four computers. The software consists of, in particular, four custom Arch Linux-based bootable ISOs. Each one represents a computer belonging to one member of a hacker collective. Their names are Yichen, Trevor, Carol, and Lilith. Each of these ISOs must be written to a separate USB stick; they'll all be booted simultaneously.
+The escape room is made up of software that runs on four computers. The software consists of, in particular, four custom Arch Linux-based bootable ISOs. Each one represents a computer belonging to one member of a hacker collective. Their names are Yichin, Trevor, Carol, and Lilith. Each of these ISOs must be written to a separate USB stick; they'll all be booted simultaneously.
 
 For obvious reasons, none of the user accounts which the escape room players are supposed to access have root permissions. These ISOs do not have `sudo`; they instead use a `root` account. If you need to fix something bad, the root password is `vegetable5` on all four ISOs. (Geddit?) You should not need to log in as root.
 

@@ -22,7 +22,7 @@ gen_fuzzes = make_generator("Black box -- suggested fuzz \"{}\"", fuzzes, "fuzz"
 ips = {
     "127.0.0.1": (120, 2, [gen_firewall], ["Competence verified.", "Instructions to recover the final code are in 0258.txt."]),
     "192.168.2.32": (80, 2, [gen_firewall, gen_passwords], ["The number you need is 942."]),
-    "102.153.223.125": (90, 3, [gen_firewall, gen_passwords, gen_fuzzes], ["SELF-DESTRUCT CODE: MAIMONIDES"])
+    "102.153.223.125": (90, 3, [gen_firewall, gen_passwords, gen_fuzzes], ["SELF-DESTRUCT CODE UNLOCKED", "ENTER THE FOLLOWING CODE INTO THE AI:", "MAIMONIDES"])
 }
 
 def get_instance(ip):

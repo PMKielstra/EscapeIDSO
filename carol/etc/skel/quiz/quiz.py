@@ -9,7 +9,7 @@ questions = [
     "Is this (1) in the northern or (2) in the southern hemisphere?",
     "This is a sunny day.  Are sunny days common here?",
     "Do most people who live here regularly drive?",
-    "Do most people who live here (1) just have washing machines (or nothing) or (2) own dryers as well?",
+    "Do most people who live here dry all their clothes electrically?",
 ]
 
 power = 1

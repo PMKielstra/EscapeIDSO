@@ -3,6 +3,7 @@ from math import sqrt
 # TREVOR'S NUMBER MANGLER
 #
 # (Work in progress.  Press the F5 key to run, or use the Run menu.)
+# (If it asks you "OK to save?", press "OK.")
 
 # Step 1: ask the user for a number to mangle
 x = int(input("Number to mangle: "))
@@ -28,7 +29,7 @@ x = 2 * (x + 1)
 
 # Second note from me: Yichen's right, but she could have said that a lot more
 # nicely.
-# I need a number to hide a thing.  It's going to be whatever comes out of the
+# Yichin wants a secret number, for a thing.  I'll use whatever comes out of the
 # fixed version of the Mangler when I put in something that breaks this version.
 # Like, if the mangler currently breaks when I put in the number 7 -- it doesn't
 # -- then the number I'm using to hide the thing is going to be whatever comes

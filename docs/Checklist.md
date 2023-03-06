@@ -22,7 +22,7 @@ If you plan to play the escape room, do not read this document. It contains spoi
 
 * A TV or a projector with speakers for playing the intro video, plus whatever other tech is needed to make it work. This will probably require a fifth computer. The video does not have captions, so audio must be clear and loud.
 
-* A hard copy printout of the hints and solutions PDF, or, at the very least, a reliable digital way of accessing it.
+* A hard copy printout of the solutions PDF, or, at the very least, a reliable digital way of accessing it.
 
 ## Before the day
 
@@ -36,7 +36,7 @@ If you plan to play the escape room, do not read this document. It contains spoi
 
 * Plan out your character. You will be playing the local IDSO liaison. How you want to do that is up to you. You should make yourself contactable by players in the room without being in it with them. If you have an intercom or a landline phone, that's perfect. Otherwise, just wait around outside the door and tell players to stick their heads out if they need a hint.
 
-* Decide how long players will have. TODO: PAR TIME FROM PLAYTESTING.
+* Decide how long players will have.
 
 * Play the intro video for yourself so you know what you should be looking for when you set up the TV or projector.
 
@@ -46,7 +46,7 @@ If you plan to play the escape room, do not read this document. It contains spoi
 
 * Set up all four laptops in the escape room area. Boot all four to the proper ISOs as described in the technical PDF.
 
-* Run through the entire escape room following the instructions in the hints and solutions PDF. Ensure that every puzzle shows up as it should and that it can be solved as intended.
+* Run through the entire escape room following the instructions in the solutions PDF. Ensure that every puzzle shows up as it should and that it can be solved as intended.
 
 * Turn off all laptops, then boot them to the proper ISOs.
 

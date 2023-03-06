@@ -31,4 +31,4 @@ Start at the capital of Peru and go north.  The answer is the only city with its
 
 CAROL:  thats nuts
 CAROL:  there are a ton of cities here
-TREVOR: but theres only one capital of peru
+TREVOR: theres only one capital of Peru
