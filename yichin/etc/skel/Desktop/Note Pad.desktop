@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Note Pad
+Comment=Take text notes
+Exec=mousepad %U
+Icon=org.xfce.mousepad
+Path=
+Terminal=false
+StartupNotify=true
