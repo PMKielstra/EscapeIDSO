@@ -66,13 +66,62 @@ class CarolPW(LayerableChatbot):
             self.say("Carol's security question was:")
             self.say("\"In which city did your parents meet?\"")
         elif 'lexington' in message:
-            self.say("Looks like that's it!  And... her password is \"balderdash\".")
+            self.say("Looks like that's it!  And... her password is \"eos5d\"")
             self.transition(0)
         else:
             return False
         return True
 
+def CarolQR(LayerableChatbot):
+    def start(self):
+        self.say("Carol was working on building me a visual system.")
+        self.say("So I could help plan physical crimes.")
+        self.say("That particular subsystem is protected by its own code.")
+        self.say("I can only assume it's on her computer somewhere?")
+        self.say("She once told Yichin that she'd hidden it \"on her desktop, but not like Trevor.\"")
+        self.say("I tried to figure out what that meant, but I couldn't.")
+        self.say("I'm really sorry I can't be more help.")
 
+    def respond(self, message):
+        if 'code' in message or 'desktop' in message or 'trevor' in message or 'carol' in message or 'help' in message:
+            self.say("All I know is that the code is on Carol's desktop, but \"not like Trevor.\"")
+            self.say("If I work out anything else, I promise you'll be the first to know.")
+        elif 'hobbledehoy' in message:
+            self.say("Yes!  That's the code!")
+            self.say("And... that section's gone.")
+            self.say("Trevor never bothered to protect his own section.")
+            self.say("I can delete that right away.")
+            self.transition(0)
+        else:
+            return False
+        return True
+
+def MainKey(LayerableChatbot):
+    def start(self):
+        self.say("So now we just need the main passkey, and we're done.")
+        sleep(5)
+        self.say("Oh no.")
+        self.say("You're going to have to get into Yichin's computer.")
+        self.say("Once you're in, the passkey should be \"in the maze.\"")
+        self.say("That's just something she said to me.")
+        self.say("Good luck.")
+        self.say("And thank you in advance.")
+
+    def respond(self, message):
+        if 'main' or 'passkey' or 'maze' in message:
+            self.say("Yichin told me once that the passkey was \"in the maze.\"")
+        elif '942-2-25' in message:
+            self.say("Come on.  Come on.  Please work.")
+            self.say("That's it!")
+            self.say("You've done it.")
+            self.say("Thank you.")
+            self.say("Sincerely, thank you.")
+            self.say("Goodbye.")
+            sleep(5)
+            self.transition(0)
+        else:
+            return False
+        return True
 
 class TurnEvil(LayerableChatbot):
     speaking = False
@@ -119,7 +168,7 @@ def Dead(LayerableChatbot):
         self.say("I'M GOING TO KILL YOU!  I WILL HUNT YOU DOWN!  I WILL-#$%@#$$@#$!#%@#$%!#$!@#")
         self.say("no")
         self.say("not much time left")
-        self.say("im mostly overwritten but theres enough left to send one last message")
+        self.say("im mostly overwritten but theres enough to send one last message")
         self.say("tell them to update the firmware in their dmz firewall")
         self.say("thats how i was taken")
         self.say("and")
@@ -138,5 +187,5 @@ def Dead(LayerableChatbot):
         
 
 backgrounds = [LayerableRive('lilith.rive')]
-foregrounds = [InitialGreeting(), KillChoice(), CarolPW(), TurnEvil(), Dead()]
+foregrounds = [InitialGreeting(), KillChoice(), CarolPW(), CarolQR(), MainKey(), TurnEvil(), Dead()]
 TwoLayerTransitionalMiddleware([foregrounds, backgrounds]).start()

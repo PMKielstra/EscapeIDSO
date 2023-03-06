@@ -1,4 +1,4 @@
-there are three numbers in the master key
+there are three numbers in the main passkey
 
 i have the first one
 i stored it on a remote server at 192.168.2.32
@@ -9,3 +9,9 @@ trevor has the second one
 carol has the third
 she said she hid it with a "photo quiz"
 no idea what thats about
+
+put them together in the format "<me>-<trevor>-<carol>"
+so if my number were 1
+and trevors were 2
+and carols were 43
+the main passkey would be 1-2-43

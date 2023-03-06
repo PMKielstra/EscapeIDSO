@@ -34,7 +34,7 @@ It goes without saying that this is entirely spoiler territory.
 
 * There's a PDF, but it's just covered in weird symbols.  Try to select the symbols.  Could they just be text in a different format?  Is there an obvious way to strip formatting from this sort of thing?
 
-* **Solution:** Open the `Password1` PDF on Trevor's desktop and copy/paste the contents into a text file.  (You can get one by opening the `Chat log 001` file.)  That will give you the password to Lilith, which is "mesopotamia".
+* **Solution:** Open the `Password1` PDF on Trevor's desktop and copy/paste the contents into a text file.  (You can get one by opening the `Chat log 001` file.)  That will give you the password to Lilith, which is `mesopotamia`.
 
 ### Am I here to kill Lilith?  Should I tell her so?
 
@@ -48,7 +48,7 @@ It goes without saying that this is entirely spoiler territory.
 
 * There's only one "capital of Peru" in the puzzle map.
 
-* **Solution:** The capital of Peru is the letter P.  There's only one P.  Start on that letter and go up (north).  The only city you find that starts along that path is Lexington.
+* **Solution:** The capital of Peru is the letter P.  There's only one P.  Start on that letter and go up (north).  The only city you find that starts along that path is Lexington.  Tell that to Lilith and she'll tell you that Carol's password is `eos5d`.
 
 ### Where's the hidden code on Carol's computer?
 
@@ -82,7 +82,8 @@ It goes without saying that this is entirely spoiler territory.
 
 ### How do I find Yichin's part of the master key?
 
-* **Solution:** As explained in the maze document, hack `192.168.2.32`.  You'll need both Trevor's and Carol's manual pages.
+* As explained in the maze document, hack `192.168.2.32`.  You'll need both Trevor's and Carol's manual pages.
+* **Solution:** `942`.
 
 ### How do I find Trevor's part of the master key?
 
@@ -107,6 +108,14 @@ It goes without saying that this is entirely spoiler territory.
 * For the third and fifth questions, look at the prevalence of clotheslines.  For the fourth question, look at the width of the streets.
 
 * **Solution:** The shadows point northeast, so the sun is in the southwest.  That makes it afternoon (first question) and the northern hemisphere (second question).  There are clotheslines everywhere and glass roofs, so yes, sunny days are presumably common here.  The roads are narrow and the buildings are large, so people here probably don't drive much.  Once again, there are loads of clotheslines, so we can't say most people here dry everything electrically.  The correct answers are, in order, `2`, `1`, `1`, `2`, and `2`, and the final number is `25`.
+
+### How do I enter the master key?
+
+* The correct formatting is given in Yichin's note from the maze.
+
+* Put the numbers together in the order Yichin-Trevor-Carol, with single dashes in between.
+
+* **Solution:** Type `942-2-25` into Lilith and press enter.
 
 ### Lilith is evil now?
 
