@@ -9,5 +9,3 @@ Traditional escape rooms are great fun.  They're also very location-specific, an
 ## Setup
 
 Download the most recent version of the escape room from the Releases section.  Further instructions, including required equipment (four laptops, four USB sticks, and equipment to play a video -- possibly including a fifth laptop -- plus some other minor things) can be found in the "Checklist" and "Technical" files inside the "Docs" folder.  Read the checklist file first.
-
-# 
