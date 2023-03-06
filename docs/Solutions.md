@@ -14,6 +14,8 @@ It goes without saying that this is entirely spoiler territory.
 
 * You shouldn't be able to break anything by clicking around, as long as you don't do something obviously silly like deleting files without knowing what they do.
 
+* If all else fails and you break things horribly, turn off the relevant computer and boot it from the ISO again.  That will reset it to the state it was in at the beginning of the game.  Immersion goes out the window but at least you have a chance to solve all the puzzles.
+
 ## Specific Hints and Solutions
 
 ### What do I do first?
