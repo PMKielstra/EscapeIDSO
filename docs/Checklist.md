@@ -2,6 +2,10 @@
 
 If you plan to play the escape room, do not read this document. It contains spoilers.
 
+## Trigger Warning
+
+The story centers around an AI who would rather delete herself than be forced to commit crimes.  It therefore (arguably) has players assist in a suicide.  There are also hints at controlling and abusive relationships.
+
 ## Equipment
 
 * A space to hold the event, including:
@@ -25,6 +29,8 @@ If you plan to play the escape room, do not read this document. It contains spoi
 * A hard copy printout of the solutions PDF, or, at the very least, a reliable digital way of accessing it.
 
 ## Before the day
+
+* Read the trigger warning (encoded in the README.md file, or reproduced in plaintext above). Decide if this is still a suitable game to play, and, if so, if or how the trigger warning should be communicated to attendees.
 
 * Find someone to act as the technical expert. This largely requires booting the laptops using the ISO files. If you know what that means without looking it up, you're more than capable.
   
@@ -53,3 +59,4 @@ If you plan to play the escape room, do not read this document. It contains spoi
 ## Between every group
 
 * Turn off all laptops, then boot them to the proper ISOs.
+* 
