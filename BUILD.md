@@ -14,7 +14,7 @@ OK, fine.
    
    3. A custom package repo in `/home/unprivileged/pkgs` containing the packages `greetd` and `greetd-tuigreet`.
    
-   4. The `archiso` and `pandoc-cli` packages installed.
+   4. The `archiso`, `pandoc-cli`, and `texlive-core` packages installed.
 
 2. `git clone` and `sudo make all`.  (Yes, this is weird, but `mkarchiso`, which is used to build the ISO images, needs to run as root.)  This can possibly take upwards of an hour per ISO, although each documentation PDF should build in just a couple of seconds.
    

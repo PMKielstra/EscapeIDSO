@@ -22,4 +22,4 @@ docs: Checklist.pdf Technical.pdf Solutions.pdf
 	pandoc -s -o ./release/docs/$@ ./docs/$(basename $@).md
 
 zip-release:
-	cd release; rm release.zip; tar -cf release.zip *
+	cd release; rm -f release.zip; tar -cf release.zip *
