@@ -20,3 +20,6 @@ docs: Checklist.pdf Technical.pdf Solutions.pdf
 %.pdf: ./docs/%.md
 	mkdir -p release/docs
 	pandoc -s -o ./release/docs/$@ ./docs/$(basename $@).md
+
+zip-release:
+	cd release; rm release.zip; tar -cf release.zip *

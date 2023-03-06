@@ -59,4 +59,3 @@ The story centers around an AI who would rather delete herself than be forced to
 ## Between every group
 
 * Turn off all laptops, then boot them to the proper ISOs.
-* 
