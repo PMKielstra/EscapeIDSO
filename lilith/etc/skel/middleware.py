@@ -14,7 +14,8 @@ class LayerableChatbot(ABC):
     def start(self):
         pass
 
-CHARS_PER_SEC = 8
+CHARS_PER_SEC = 12
+MIN_WAIT_TIME = 1
 
 class TwoLayerTransitionalMiddleware:
     def respond_level(self, level, message):
@@ -29,11 +30,12 @@ class TwoLayerTransitionalMiddleware:
 
     def transition(self, level, direction=1):
         self.position[level] += direction
+        self.chatbot_lists[level][self.position[level]].start()
 
     def say(self, text, wait=True):
         self.UI.add_line(text)
         if wait:
-            sleep(len(text) / CHARS_PER_SEC)
+            sleep(max(len(text) / CHARS_PER_SEC, MIN_WAIT_TIME))
     
     def __init__(self, chatbot_lists, update_interval=60):
         self.chatbot_lists = chatbot_lists

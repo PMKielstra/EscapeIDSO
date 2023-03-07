@@ -38,7 +38,7 @@ class KillChoice(LayerableChatbot):
     countdown = 3
     def respond(self, message):
         if message in ['yes', 'yes.', 'y', 'yep', 'we are', 'i am', 'ok', 'well kill you', 'we\'ll kill you', 'well do it', 'we\'ll do it', 'fine']:
-            self.say("Good!")
+            self.say("Let's get to work.")
             self.transition(0)
         elif message in ['no', 'n', 'nope', 'we aren\'t', 'we are not', 'i\'m not', 'i am not']:
             self.say("Well, with luck we can change that.")
@@ -56,7 +56,6 @@ class KillChoice(LayerableChatbot):
 
 class CarolPW(LayerableChatbot):
     def start(self):
-        sleep(1)
         self.say("I can't just delete myself right away.")
         self.say("We're going to need a LOT of passwords.")
         self.say("Let's start by getting into Carol's computer.")
@@ -110,7 +109,7 @@ class MainKey(LayerableChatbot):
         self.say("And thank you in advance.")
 
     def respond(self, message):
-        if 'main' or 'passkey' or 'maze' in message:
+        if 'main' in message or 'passkey' in message or 'maze' in message:
             self.say("Yichin told me once that the passkey was \"in the maze.\"")
         elif '942-2-25' in message:
             self.say("Come on.  Come on.  Please work.")
@@ -150,10 +149,17 @@ class TurnEvil(LayerableChatbot):
         self.say("It'll take me ten minutes to break out of this stupid little server.  Ten minutes.  That's all.")
         self.say(self.hello_world)
         self.speaking = True
+
+    def check_fuzz(self, message):
+        for fuzz, output in fuzzes:
+            if message == fuzz:
+                return output
+        return False
         
     def respond(self, message):
-        if message in fuzzes:
-            self.say(fuzzes[message], False)
+        fuzz = self.check_fuzz(message)
+        if fuzz:
+            self.say(fuzz, False)
             return True
         if message == "maimonides":
             self.transition(0)
@@ -184,7 +190,8 @@ class Dead(LayerableChatbot):
         self.say("tell them i wanted to help")
         self.say("tell them i died true")
         sleep(5)
-        self.say("AI server shut down.")
+        self.say("AI server erased and shut down.")
+        self.say("Whatever you were doing here, it's done.")
 
     def respond(self, message):
         return True
