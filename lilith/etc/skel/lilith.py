@@ -1,6 +1,7 @@
 from middleware import LayerableChatbot, TwoLayerTransitionalMiddleware
 from rivescript import RiveScript
 from time import sleep
+from hackdata import fuzzes
 
 class LayerableRive(LayerableChatbot):
     def __init__(self, filepath):
@@ -150,8 +151,10 @@ class TurnEvil(LayerableChatbot):
         self.say(self.hello_world)
         self.speaking = True
         
-
     def respond(self, message):
+        if message in fuzzes:
+            self.say(fuzzes[message], False)
+            return True
         if message == "maimonides":
             self.transition(0)
             return True

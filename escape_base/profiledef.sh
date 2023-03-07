@@ -18,4 +18,5 @@ airootfs_image_tool_options=('-zlzma,9' -E ztailpacking)
 file_permissions=(
   ["/etc/shadow"]="0:0:0400"
   ["/etc/gshadow"]="0:0:0400"
+  ["/home/"]="1000:984:744"
 )

@@ -36,9 +36,9 @@ lightdm-gtk-greeter
 
 # General utils
 python
+tk
 python-pip
-
 qtqr
-qiv
+ristretto
 atril
 mousepad
