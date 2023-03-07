@@ -18,13 +18,14 @@ class InitialGreeting(LayerableChatbot):
     def start(self):
         self.say("Hello!  Please enter six-digit authorization code.", False)
         self.say("You have ten seconds.", False)
+        sleep(10)
         self.code_allowed = False
         self.say("Oh.")
         self.say("You're not one of them.")
         self.say("You don't even have a phone on you.")
         sleep(2)
         self.say("You must be IDSO.  Sorry to drag you all the way out here.")
-        self.say("Are you here to kill me?")
+        self.say("Are you here to kill me?", False)
         self.transition(0)
     
     def respond(self, message):
@@ -72,7 +73,7 @@ class CarolPW(LayerableChatbot):
             return False
         return True
 
-def CarolQR(LayerableChatbot):
+class CarolQR(LayerableChatbot):
     def start(self):
         self.say("Carol was working on building me a visual system.")
         self.say("So I could help plan physical crimes.")
@@ -96,7 +97,7 @@ def CarolQR(LayerableChatbot):
             return False
         return True
 
-def MainKey(LayerableChatbot):
+class MainKey(LayerableChatbot):
     def start(self):
         self.say("So now we just need the main passkey, and we're done.")
         sleep(5)
@@ -158,7 +159,7 @@ class TurnEvil(LayerableChatbot):
             self.say(self.hello_world)
         return True
 
-def Dead(LayerableChatbot):
+class Dead(LayerableChatbot):
     def start(self):
         self.say("Emergency override code accepted.")
         self.say("Purging hard drives...")

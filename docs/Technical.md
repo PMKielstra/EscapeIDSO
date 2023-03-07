@@ -10,9 +10,9 @@ If you haven't used Arch before, it's a little less convenient than Linux distri
 
 * Write all ISOs to different USBs.
 
-* Verify that all four ISOs boot properly on their assigned laptops. (Which laptop is which doesn't really matter, but, for immersion, the most expensive should be Lilith's, followed by Yichen's.)
+* Verify that all four ISOs boot properly on their assigned laptops. (Which laptop is which doesn't really matter, but, for immersion, the most expensive should be Lilith's, followed by Yichin's.)
   
-  * Yichen and Carol should boot to graphical login screens with password prompts. Lilith should instead boot to a command-line login prompt. Trevor should have no password prompt.
+  * Yichin and Carol should boot to graphical login screens with password prompts. Lilith should instead boot to a command-line login prompt. Trevor should have no password prompt.
 
 * Trevor has a QR code scanner. Carol has a QR code that can be accessed by changing the desktop background. Verify that it's possible to scan the latter with the former.
   

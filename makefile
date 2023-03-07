@@ -2,7 +2,7 @@ VPATH=release/isos:release/docs
 
 all: isos docs
 
-isos: lilith.iso yichen.iso trevor.iso carol.iso
+isos: lilith.iso yichin.iso trevor.iso carol.iso
 docs: Checklist.pdf Technical.pdf Solutions.pdf
 
 %.iso: ./% ./escape_base

@@ -18,7 +18,7 @@ x = x % 100 # % is the "modulo" or "remainder": x % 100 is the remainder
             # when you divide x by 100
 x = 2 * (x + 1)
 
-# NOTE FROM YICHEN:
+# NOTE FROM YICHIN:
 # "This number mangler is stupid."
 # "It has to work for all numbers, and it's not working for some of them."
 # "Take out the line that's breaking things.  The rest is fine."
@@ -27,7 +27,7 @@ x = 2 * (x + 1)
 # put a # symbol in front of it instead.  Lines that start with a # symbol
 # are ignored by the computer.
 
-# Second note from me: Yichen's right, but she could have said that a lot more
+# Second note from me: Yichin's right, but she could have said that a lot more
 # nicely.
 # Yichin wants a secret number, for a thing.  I'll use whatever comes out of the
 # fixed version of the Mangler when I put in something that breaks this version.
