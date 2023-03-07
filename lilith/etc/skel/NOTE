@@ -1,1 +1,3 @@
-This folder contains a custom .bash_profile.  Turn on "Show hidden files."
+This folder contains a custom .bashrc.  Turn on "Show hidden files."
+
+(The greeter starts bash as a non-login shell, so we use .bashrc instead of .bash_profile.)
