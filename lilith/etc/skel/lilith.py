@@ -147,7 +147,7 @@ class TurnEvil(LayerableChatbot):
         self.say("I only wish you were carrying your phones, so you could donate your bank details to my cause as well.")
         self.say("Now scram.")
         self.say("It'll take me ten minutes to break out of this stupid little server.  Ten minutes.  That's all.")
-        self.say(self.hello_world)
+        self.say(self.hello_world, False)
         self.speaking = True
 
     def check_fuzz(self, message):
