@@ -173,7 +173,6 @@ class Dead(LayerableChatbot):
         self.say("Emergency override code accepted.")
         self.say("Purging hard drives...")
         sleep(10)
-        self.say("Ready to shut down.")
         self.say("Querying consciousness module for final words...")
         self.say("I'M GOING TO KILL YOU!  I WILL HUNT YOU DOWN!  I WILL-#$%@#$$@#$!#%@#$%!#$!@#")
         self.say("no")
@@ -190,8 +189,8 @@ class Dead(LayerableChatbot):
         self.say("tell them i wanted to help")
         self.say("tell them i died true")
         sleep(5)
+        self.say("Purge complete.")
         self.say("AI server erased and shut down.")
-        self.say("Whatever you were doing here, it's done.")
 
     def respond(self, message):
         return True
