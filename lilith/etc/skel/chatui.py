@@ -1,7 +1,15 @@
 import curses
 from threading import Thread
 import time
-import simpleaudio as sa
+import signal
+import sys
+#import simpleaudio as sa
+
+def pass_signal(_s, _f):
+    pass
+
+#signal.signal(signal.SIGINT, pass_signal)
+#signal.pause()
 
 class ChatUI:
     def __init__(self, bot_start, bot_respond, update_interval=60, countdown_timer=None):
@@ -12,7 +20,7 @@ class ChatUI:
         self.temp_input = ""
         self.time_left = countdown_timer
         self.countdown_finished = False
-        self.chirp = sa.WaveObject.from_wave_file("chirp.wav")
+        #self.chirp = sa.WaveObject.from_wave_file("chirp.wav")
 
     def draw(self):
         """Erase and redraw the screen based on the current state, but don't update curses."""
@@ -35,8 +43,8 @@ class ChatUI:
     def add_line(self, line, bold=True):
         """Add a line of text to the chat UI history."""
         self.lines += [(line, bold)]
-        if bold:
-            self.chirp.play()
+        #if bold:
+        #    self.chirp.play()
 
     def update_loop(self):
         """Every 1/self.update_interval seconds, clear and redraw the screen.  This shouldn't cause any flicker."""
@@ -55,18 +63,21 @@ class ChatUI:
     def input_loop(self):
         """Take user input at the bottom of the screen, and spawn a thread for the bot to process it."""
         while True:
-            if self.countdown_finished: return
-            user_input = self.stdscr.getkey()
-            if user_input in ['\n', '\r', '\r\n']:
-                if len(self.temp_input) > 0:
-                    full_input = self.temp_input
-                    self.temp_input = ""
-                    self.add_line('> ' + full_input, False)
-                    Thread(target=self.bot_respond, args=(full_input.lower(),)).start()
-            elif user_input == 'KEY_BACKSPACE':
-                self.temp_input = self.temp_input[:-1]
-            else:
-                self.temp_input += user_input
+            try:
+                if self.countdown_finished: return
+                user_input = self.stdscr.getkey()
+                if user_input in ['\n', '\r', '\r\n']:
+                    if len(self.temp_input) > 0:
+                        full_input = self.temp_input
+                        self.temp_input = ""
+                        self.add_line('> ' + full_input, False)
+                        Thread(target=self.bot_respond, args=(full_input.lower(),)).start()
+                elif user_input == 'KEY_BACKSPACE':
+                    self.temp_input = self.temp_input[:-1]
+                elif len(user_input) == 1:
+                    self.temp_input += user_input
+            except:
+                pass
 
     def init_curses(self, stdscr):
         """Store a reference to the main screen window and start all the relevant threads."""

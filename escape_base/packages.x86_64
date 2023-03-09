@@ -25,6 +25,9 @@ libva-mesa-driver
 mesa-vdpau
 virtualbox-guest-utils
 
+# Audio
+alsa-utils
+
 # Lilith's greeter
 greetd
 greetd-tuigreet
@@ -41,4 +44,4 @@ python-pip
 qtqr
 ristretto
 atril
-mousepad
+leafpad

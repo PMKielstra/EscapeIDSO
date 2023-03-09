@@ -61,7 +61,7 @@ class ChatUI:
                     Thread(target=self.bot_respond, args=(full_input.lower(),)).start()
             elif user_input == 'KEY_BACKSPACE':
                 self.temp_input = self.temp_input[:-1]
-            else:
+            elif len(user_input) == 1:
                 self.temp_input += user_input
 
     def init_curses(self, stdscr):
