@@ -22,6 +22,7 @@ docs: Checklist.pdf Technical.pdf Solutions.pdf Credits.pdf Intro.mp4
 	pandoc -s -o ./release/docs/$@ ./docs/$(basename $@).md
 
 Intro.mp4: ./docs/Intro.mp4
+	mkdir -p release/docs
 	cp docs/Intro.mp4 release/docs/Intro.mp4
 
 zip-release:
