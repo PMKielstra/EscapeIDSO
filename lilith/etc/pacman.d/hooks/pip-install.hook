@@ -9,4 +9,4 @@ Target = python-pip
 Description = Installing RiveScript with pip
 When = PostTransaction
 Depends = python-pip
-Exec = /bin/bash -c "pip install rivescript simpleaudio"
+Exec = /bin/bash -c "pip install rivescript"
