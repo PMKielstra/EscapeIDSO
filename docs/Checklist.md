@@ -32,6 +32,12 @@ The story centers around an AI who would rather delete herself than be forced to
 
 * Read the trigger warning (encoded in the README.md file, or reproduced in plaintext above). Decide if this is still a suitable game to play, and, if so, if or how the trigger warning should be communicated to attendees.
 
+* Watch the intro video, to:
+  
+  * Familiarize yourself with the tone and jargon of the game.  (IDSO is the International Digital Security Organization, although this is never spelled out.)
+  
+  * Know what to look for when you set up the TV or projector.
+
 * Find someone to act as the technical expert. This largely requires booting the laptops using the ISO files. If you know what that means without looking it up, you're more than capable.
   
   * The technical expert should follow the instructions in the technical PDF.
@@ -44,7 +50,7 @@ The story centers around an AI who would rather delete herself than be forced to
 
 * Decide how long players will have.
 
-* Play the intro video for yourself so you know what you should be looking for when you set up the TV or projector.
+* 
 
 ## On the day
 
