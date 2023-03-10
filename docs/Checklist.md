@@ -50,8 +50,6 @@ The story centers around an AI who would rather delete herself than be forced to
 
 * Decide how long players will have.
 
-* 
-
 ## On the day
 
 * Play the entire intro video and make sure that it looks and sounds acceptable.
@@ -62,6 +60,13 @@ The story centers around an AI who would rather delete herself than be forced to
 
 * Turn off all laptops, then boot them to the proper ISOs.
 
+* Cue up the intro video ready to be played for the first group.
+
 ## Between every group
 
 * Turn off all laptops, then boot them to the proper ISOs.
+* Cue up the intro video ready to be played for the next group.
+
+## At the end of the day
+
+* Turn off all laptops and remove the USB sticks, DVDs, or whatever other media the ISOs are stored on.  Verify that they all once again boot "as normal."
