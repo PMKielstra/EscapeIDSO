@@ -1,15 +1,6 @@
 import curses
 from threading import Thread
 import time
-import signal
-import sys
-#import simpleaudio as sa
-
-def pass_signal(_s, _f):
-    pass
-
-#signal.signal(signal.SIGINT, pass_signal)
-#signal.pause()
 
 class ChatUI:
     def __init__(self, bot_start, bot_respond, update_interval=60, countdown_timer=None):
@@ -20,7 +11,6 @@ class ChatUI:
         self.temp_input = ""
         self.time_left = countdown_timer
         self.countdown_finished = False
-        #self.chirp = sa.WaveObject.from_wave_file("chirp.wav")
 
     def draw(self):
         """Erase and redraw the screen based on the current state, but don't update curses."""
@@ -43,8 +33,6 @@ class ChatUI:
     def add_line(self, line, bold=True):
         """Add a line of text to the chat UI history."""
         self.lines += [(line, bold)]
-        #if bold:
-        #    self.chirp.play()
 
     def update_loop(self):
         """Every 1/self.update_interval seconds, clear and redraw the screen.  This shouldn't cause any flicker."""

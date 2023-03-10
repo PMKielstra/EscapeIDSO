@@ -12,7 +12,7 @@ OK, fine.
    
    2. A user called `unprivileged` which is not `root` but does have `sudo` privileges.
    
-   3. A custom package repo in `/home/unprivileged/pkgs` containing the packages `greetd` and `greetd-tuigreet`.
+   3. A custom package repo in `/home/unprivileged/pkgs` containing the packages `greetd`, `greetd-tuigreet`, and `idle`.
    
    4. The `archiso`, `pandoc-cli`, and `texlive-core` packages installed.
 
