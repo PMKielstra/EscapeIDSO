@@ -45,16 +45,19 @@ class ChatUI:
     def update_loop(self):
         """Every 1/self.update_interval seconds, clear and redraw the screen.  This shouldn't cause any flicker."""
         while True:
-            time.sleep(1/self.update_interval)
-            self.draw()
-            curses.doupdate()
-            if self.time_left is not None:
-                self.time_left -= 1/self.update_interval
-                if self.time_left <= 0:
-                    self.countdown_finished = True
-                    print("Out of time.  Press any key to end run.")
-                    del self.stdscr
-                    return
+            try:
+                time.sleep(1/self.update_interval)
+                self.draw()
+                curses.doupdate()
+                if self.time_left is not None:
+                    self.time_left -= 1/self.update_interval
+                    if self.time_left <= 0:
+                        self.countdown_finished = True
+                        print("Out of time.  Press any key to end run.")
+                        del self.stdscr
+                        return
+            except:
+                pass
 
     def input_loop(self):
         """Take user input at the bottom of the screen, and spawn a thread for the bot to process it."""
