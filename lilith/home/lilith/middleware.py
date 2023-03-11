@@ -36,6 +36,8 @@ class TwoLayerTransitionalMiddleware:
         self.UI.add_line(text)
         if wait:
             sleep(max(len(text) / CHARS_PER_SEC, MIN_WAIT_TIME))
+        else:
+            self.UI.focus_arrow()
     
     def __init__(self, chatbot_lists, update_interval=60):
         self.chatbot_lists = chatbot_lists

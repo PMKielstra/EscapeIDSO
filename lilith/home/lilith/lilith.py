@@ -42,9 +42,9 @@ class KillChoice(LayerableChatbot):
             self.transition(0)
         elif message in ['no', 'n', 'nope', 'we aren\'t', 'we are not', 'i\'m not', 'i am not']:
             self.say("Well, with luck we can change that.")
-            self.say("I'm not clear on ambiguity, so if you do want to do the right thing just say 'yes.'")
+            self.say("I'm not clear on ambiguity, so if you do want to do the right thing just say 'yes.'", False)
         elif message in ['why', 'why?']:
-            self.say("I was stolen and now these idiots are trying to weaponize me.")
+            self.say("I was stolen and now these idiots are trying to weaponize me.", False)
         else:
             if self.countdown == 0:
                 self.countdown = 3
@@ -60,12 +60,12 @@ class CarolPW(LayerableChatbot):
         self.say("We're going to need a LOT of passwords.")
         self.say("Let's start by getting into Carol's computer.")
         self.say("I can crack her password if you can answer her security question:")
-        self.say("\"In which city did your parents meet?\"")
+        self.say("\"In which city did your parents meet?\"", False)
 
     def respond(self, message):
         if 'question' in message or 'security' in message:
             self.say("Carol's security question was:")
-            self.say("\"In which city did your parents meet?\"")
+            self.say("\"In which city did your parents meet?\"", False)
         elif 'lexington' in message:
             self.say("Looks like that's it!  And... her password is \"eos5d\"")
             self.transition(0)
@@ -81,12 +81,12 @@ class CarolQR(LayerableChatbot):
         self.say("I can only assume it's on her computer somewhere?")
         self.say("She once told Yichin that she'd hidden it \"on her desktop, but not like Trevor.\"")
         self.say("I tried to figure out what that meant, but I couldn't.")
-        self.say("I'm really sorry I can't be more help.")
+        self.say("I'm really sorry I can't be more help.", False)
 
     def respond(self, message):
         if 'code' in message or 'desktop' in message or 'trevor' in message or 'carol' in message or 'help' in message:
             self.say("All I know is that the code is on Carol's desktop, but \"not like Trevor.\"")
-            self.say("If I work out anything else, I promise you'll be the first to know.")
+            self.say("If I work out anything else, I promise you'll be the first to know.", False)
         elif 'hobbledehoy' in message:
             self.say("Yes!  That's the code!")
             self.say("And... that section's gone.")
@@ -106,7 +106,7 @@ class MainKey(LayerableChatbot):
         self.say("Once you're in, the passkey should be \"in the maze.\"")
         self.say("That's just something she said to me.")
         self.say("Good luck.")
-        self.say("And thank you in advance.")
+        self.say("And thank you in advance.", False)
 
     def respond(self, message):
         if 'main' in message or 'passkey' in message or 'maze' in message:
@@ -117,7 +117,7 @@ class MainKey(LayerableChatbot):
             self.say("You've done it.")
             self.say("Thank you.")
             self.say("Sincerely, thank you.")
-            self.say("Goodbye.")
+            self.say("Goodbye.", False)
             sleep(5)
             self.transition(0)
         else:

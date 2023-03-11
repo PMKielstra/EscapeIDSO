@@ -11,6 +11,7 @@ class ChatUI:
         self.temp_input = ""
         self.time_left = countdown_timer
         self.countdown_finished = False
+        self.highlight_arrow = False
 
     def draw(self):
         """Erase and redraw the screen based on the current state, but don't update curses."""
@@ -23,8 +24,12 @@ class ChatUI:
                 self.stdscr.addstr(i, 0, line)
         if self.time_left is not None:
             time_str = time.strftime("%M:%S", time.gmtime(self.time_left))
-            self.stdscr.addstr(0, curses.COLS - len(time_str), time_str, curses.A_STANDOUT)            
-        self.stdscr.addstr(curses.LINES - 1, 0, '> ' + self.temp_input)
+            self.stdscr.addstr(0, curses.COLS - len(time_str), time_str, curses.A_STANDOUT)
+        if self.highlight_arrow and len(self.temp_input) == 0:
+            self.stdscr.addstr(curses.LINES - 1, 0, '> ', curses.A_BOLD)
+        else:
+            self.highlight_arrow = False
+            self.stdscr.addstr(curses.LINES - 1, 0, '> ' + self.temp_input)
         self.stdscr.noutrefresh()
 
     def stop_clock(self):
@@ -33,6 +38,9 @@ class ChatUI:
     def add_line(self, line, bold=True):
         """Add a line of text to the chat UI history."""
         self.lines += [(line, bold)]
+
+    def focus_arrow(self):
+        self.highlight_arrow = True
 
     def update_loop(self):
         """Every 1/self.update_interval seconds, clear and redraw the screen.  This shouldn't cause any flicker."""
