@@ -10,7 +10,7 @@ class LayerableRive(LayerableChatbot):
         self.rive.sort_replies()
 
     def respond(self, message):
-        self.say(self.rive.reply('localuser', message))
+        self.say(self.rive.reply('localuser', message), False)
         return True
 
 class InitialGreeting(LayerableChatbot):
