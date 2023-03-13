@@ -1,5 +1,4 @@
 # Base packages
-
 base
 linux
 mkinitcpio
@@ -7,35 +6,5 @@ mkinitcpio-archiso
 syslinux
 linux-firmware
 
-# Display
-xorg-server
-xorg-xrdb
-xorg-xinit
-xorg-xrandr
-xorg-xev
-xorg-xdpyinfo
-xorg-xprop
-xf86-video-intel
-xf86-video-amdgpu
-xf86-video-vesa
-vulkan-intel
-vulkan-icd-loader
-libva-intel-driver
-libva-mesa-driver
-mesa-vdpau
-virtualbox-guest-utils
-
-
-# Desktop
-xfce4
-lightdm
-lightdm-gtk-greeter
-
 # General utils
 python
-tk
-python-pip
-qtqr
-ristretto
-atril
-leafpad

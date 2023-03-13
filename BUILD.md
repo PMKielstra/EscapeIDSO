@@ -10,9 +10,19 @@ OK, fine.
    
    1. Several GB of RAM.  (Mine has 10, which I think is slightly overkill.)
    
-   2. A user which is not `root` but does have `sudo` privileges.
+   2. The following packages installed:
+      
+      1. `sudo`
+      
+      2. `rsync`
+      
+      3. `archiso`
+      
+      4. `pandoc-cli`
+      
+      5. `texlive-core`
    
-   3. The `archiso`, `pandoc-cli`, and `texlive-core` packages installed.
+   3. A user which is not `root` but does have `sudo` privileges.
 
 2. As the non-root user, `git clone` and `sudo make all`.  (Yes, this is weird, but `mkarchiso`, which is used to build the ISO images, needs to run as `sudo`.  If it's run from the root user, it messes up the ownership of files on the resultant ISOs.)  This can possibly take upwards of half an hour per ISO, although each documentation PDF should build in just a couple of seconds.
    
