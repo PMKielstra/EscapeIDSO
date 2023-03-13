@@ -17,5 +17,6 @@ for package in ${profile[@]}; do
     rsync -a "${package}/airootfs/" "${ASSEMBLY_PATH}/airootfs/"
     if [ -f "${package}/packages.x86_64" ]; then
         cat "${package}/packages.x86_64" >> "${ASSEMBLY_PATH}/packages.x86_64"
+	echo -e '\n' >> "${ASSEMBLY_PATH}/packages.x86_64"
     fi
 done
