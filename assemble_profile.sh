@@ -4,14 +4,14 @@
 
 PROFILE_NAME=$1
 declare -A profiles
-profiles["lilith"]="python_libs_common lilith"
-profiles["trevor"]="graphical_common trevor"
-profiles["yichin"]="graphical_common python_libs_common yichin"
-profiles["carol"]="graphical_common carol"
+profiles["lilith"]="common_python_chat individual_lilith"
+profiles["trevor"]="common_graphical individual_trevor"
+profiles["yichin"]="common_graphical common_python_chat individual_yichin"
+profiles["carol"]="common_graphical individual_carol"
 eval 'profile=${profiles[$PROFILE_NAME]}'
 
 ASSEMBLY_PATH=$2
-rsync -a escape_base/ "${ASSEMBLY_PATH}/"
+rsync -a base/ "${ASSEMBLY_PATH}/"
 
 for package in ${profile[@]}; do
     rsync -a "${package}/airootfs/" "${ASSEMBLY_PATH}/airootfs/"

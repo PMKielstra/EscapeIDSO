@@ -5,7 +5,7 @@ all: isos docs
 isos: lilith.iso yichin.iso trevor.iso carol.iso
 docs: Checklist.pdf Technical.pdf Solutions.pdf Credits.pdf Intro.mp4
 
-%.iso: ./% ./graphical_common ./escape_base
+%.iso: ./individual_% ./base
 	mkdir -p release/isos
 	$(eval ESCAPE_PROFILE := $(shell mktemp -d))
 	$(eval ESCAPE_BUILD := $(shell mktemp -d))
