@@ -4,9 +4,9 @@
 
 PROFILE_NAME=$1
 declare -A profiles
-profiles["lilith"]="lilith"
+profiles["lilith"]="python_libs_common lilith"
 profiles["trevor"]="graphical_common trevor"
-profiles["yichin"]="graphical_common yichin"
+profiles["yichin"]="graphical_common python_libs_common yichin"
 profiles["carol"]="graphical_common carol"
 eval 'profile=${profiles[$PROFILE_NAME]}'
 
