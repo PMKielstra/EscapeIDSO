@@ -2,7 +2,7 @@ from math import sqrt
 
 # TREVOR'S NUMBER MANGLER
 #
-# (Work in progress.  Press the F5 key to run, or use the Run menu.)
+# (Work in progress.  Click "Run" > "Run Module" to run.)
 # (If it asks you "OK to save?", press "OK.")
 
 # Step 1: ask the user for a number to mangle
@@ -11,7 +11,7 @@ x = int(input("Number to mangle: "))
 # Step 2: mangle the number!
 x = x + 10
 x = x * 3
-x = 12 / x
+x = 1250 / x
 x = x / 2
 x = sqrt(x * x) # sqrt is the "square root" function
 x = x % 100 # % is the "modulo" or "remainder": x % 100 is the remainder
