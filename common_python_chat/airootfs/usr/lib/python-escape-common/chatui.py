@@ -26,7 +26,8 @@ class ChatUI:
             time_str = time.strftime("%M:%S", time.gmtime(self.time_left))
             self.stdscr.addstr(0, curses.COLS - len(time_str), time_str, curses.A_STANDOUT)
         if self.highlight_arrow and len(self.temp_input) == 0:
-            self.stdscr.addstr(curses.LINES - 1, 0, '> ', curses.A_BOLD)
+            self.stdscr.addstr(curses.LINES - 1, 0, '>', curses.A_STANDOUT)
+            self.stdscr.addstr(curses.LINES - 1, 1, ' ')
         else:
             self.highlight_arrow = False
             self.stdscr.addstr(curses.LINES - 1, 0, '> ' + self.temp_input)
