@@ -1,1 +1,1 @@
-Note to self: when you open the QR code scanner and click "Decode from webcam", it'll give you a menu to choose the camera.  There will be two identical entries in this menu.  One will work; the other will crash the scanner.  This is a problem with the scanner code.  Just try them both.
+Note to self: when you open the QR code scanner and click "Decode from webcam", it'll give you a menu to choose the camera.  There will be two identical entries in this menu.  One will work.  The other will crash the scanner.  This is a problem with the scanner.  Just try them both.
