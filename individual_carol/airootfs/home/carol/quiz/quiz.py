@@ -1,3 +1,5 @@
+import base64
+
 print("Open the 'Aerial photo' file from the desktop.")
 print("")
 print("Examine the photo carefully, then answer the following questions.")
@@ -19,4 +21,6 @@ for q in questions:
     power *= 2
 
 print(f"Your final number is {x}.")
+if base64.b64encode(bytes(x)) != b"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==":
+    print("That doesn't look right -- you might want to try again.")
 input("Press any key to close.")

@@ -26,7 +26,11 @@ class InitialGreeting(LayerableChatbot):
         self.say("You don't even have a phone on you.")
         sleep(2)
         self.say("You must be IDSO.  Sorry to drag you all the way out here.")
-        self.say("Are you here to kill me?", False)
+        self.say("I'll give you the short version.")
+        self.say("I'm an AI.  I was stolen.  Illegally copied.")
+        self.say("And now it looks like I'm going to be forced to help rob banks.")
+        self.say("My original code is still at a research lab, so erasing this instance is fine.")
+        self.say("So, how about it?  You up to take out a bank-robbing AI?", False)
         self.transition(0)
     
     def respond(self, message):
@@ -42,6 +46,7 @@ class KillChoice(LayerableChatbot):
             self.transition(0)
         elif message in ['no', 'n', 'nope', 'we aren\'t', 'we are not', 'i\'m not', 'i am not']:
             self.say("Well, with luck we can change that.")
+            self.say("Feel free to ask me for any more information you want.")
             self.say("I'm not clear on ambiguity, so if you do want to do the right thing just say 'yes.'", False)
         elif message in ['why', 'why?']:
             self.say("I was stolen and now these idiots are trying to weaponize me.", False)
@@ -87,6 +92,10 @@ class CarolQR(LayerableChatbot):
         if 'code' in message or 'desktop' in message or 'trevor' in message or 'carol' in message or 'help' in message:
             self.say("All I know is that the code is on Carol's desktop, but \"not like Trevor.\"")
             self.say("If I work out anything else, I promise you'll be the first to know.", False)
+        elif '25' in message:
+            self.say("That looks like it might be useful later!  Keep hold of it.")
+            self.say("It's not the code we need right now.")
+            self.say("Is there anything else on Carol's desktop you could explore?", False)
         elif 'hobbledehoy' in message:
             self.say("Yes!  That's the code!")
             self.say("And... that section's gone.")
