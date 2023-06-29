@@ -23,4 +23,4 @@ for q in questions:
 print(f"Your final number is {x}.")
 if base64.b64encode(bytes(x)) != b"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==":
     print("That doesn't look right -- you might want to try again.")
-input("Press any key to close.")
+input("Press enter to close.")

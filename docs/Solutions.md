@@ -76,7 +76,7 @@ It goes without saying that this is entirely spoiler territory.
 
 * Lilith says it's in a maze.  Does the `Maze` folder have any files that look different?
 
-* `9999 READ ME FIRST` tells you to hack `127.0.0.1`.  There's a hacking manual and a shortcut to launch the hacktool on Yichin's desktop.
+* `0000 READ ME FIRST` tells you to hack `127.0.0.1`.  There's a hacking manual and a shortcut to launch the hacktool on Yichin's desktop.
 
 * Where else have you seen hacktool manual pages before?
 

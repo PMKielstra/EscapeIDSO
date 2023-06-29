@@ -5,7 +5,10 @@ from chatui import ChatUI
 def run():
     ip = input("Enter IP address: ")
     instance = get_instance(ip)
-    if not instance: return
+    if not instance:
+        print("No target found at this IP address.")
+        input("Press enter to quit.")
+        return
 
     time = instance.time
     msgs = instance.msgs
