@@ -20,7 +20,7 @@ OK, fine.
       
       4. `pandoc-cli`
       
-      5. `texlive-latex`, `texlive-latexrecommended`, and `texlive-fontsrecommended`.
+      5. `texlive-latexrecommended` and `texlive-fontsrecommended`
    
    3. A user which is not `root` but does have `sudo` privileges.
 
