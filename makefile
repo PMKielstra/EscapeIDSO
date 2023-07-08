@@ -6,9 +6,7 @@ isos: lilith.iso yichin.iso trevor.iso carol.iso
 docs: Checklist.pdf Technical.pdf Solutions.pdf Credits.pdf Intro.mp4
 
 %.iso: ./individual_% ./base
-	mkdir -p release/isos
-	chown unprivileged:unprivileged release
-	chown unprivileged:unprivileged release/isos
+	su unprivileged -c "mkdir -p release/isos"
 	$(eval ESCAPE_PROFILE := $(shell mktemp -d))
 	$(eval ESCAPE_BUILD := $(shell mktemp -d))
 	$(eval ESCAPE_OUT := $(shell mktemp -d))
@@ -18,21 +16,15 @@ docs: Checklist.pdf Technical.pdf Solutions.pdf Credits.pdf Intro.mp4
 	rm -rf $(ESCAPE_PROFILE)
 	rm -rf $(ESCAPE_BUILD)
 	rm -rf $(ESCAPE_OUT)
-	chown unprivileged:unprivileged release/isos/$@
+	chown `stat -c "%u:%g" release/isos` release/isos/$@
 
 %.pdf: ./docs/%.md
-	mkdir -p release/docs
-	chown unprivileged:unprivileged release
-	chown unprivileged:unprivileged release/docs
-	pandoc -s -o release/docs/$@ docs/$(basename $@).md
-	chown unprivileged:unprivileged release/docs/$(basename $@).pdf
+	su unprivileged -c "mkdir -p release/docs"
+	su unprivileged -c "pandoc -s -o release/docs/$@ docs/$(basename $@).md"
 
 Intro.mp4: ./docs/Intro.mp4
-	mkdir -p release/docs
-	chown unprivileged:unprivileged release
-	chown unprivileged:unprivileged release/docs
-	cp docs/Intro.mp4 release/docs/Intro.mp4
-	chown unprivileged:unprivileged release/docs/Intro.mp4
+	su unprivileged -c "mkdir -p release/docs"
+	su unprivileged -c "cp docs/Intro.mp4 release/docs/Intro.mp4"
 
 zip-release:
-	cd release; rm -f release.zip; tar -cf release.zip *; chown unprivileged:unprivileged release.zip
+	su unprivileged -c "cd release; rm -f release.zip; tar -cf release.zip *"
