@@ -26,4 +26,4 @@ Intro.mp4: ./docs/Intro.mp4
 	cp docs/Intro.mp4 release/docs/Intro.mp4
 
 zip-docs:
-	cd release/docs; tar -cf Docs.zip *
+	cd release/docs; tar -cf docs.zip *
