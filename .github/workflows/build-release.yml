@@ -1,0 +1,34 @@
+name: build-release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build-Docker
+      run: docker build --tag idsomake .
+    - name: Build
+      run: docker run --mount type=bind,source=.,target=/home/unprivileged/escapebuild --privileged idsobuild all
+    - name: Zip-release
+      working-directory: release/docs
+      run: tar -cf docs.zip *
+    - uses: "marvinpinto/action-automatic-releases@latest"
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        prerelease: false
+        files: |
+          release/isos/trevor.iso
+          release/isos/yichin.iso
+          release/isos/carol.iso
+          release/isos/lilith.iso
+          release/docs/docs.zip
