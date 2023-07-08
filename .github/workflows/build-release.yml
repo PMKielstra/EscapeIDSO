@@ -19,10 +19,9 @@ jobs:
     - name: Build-Docker
       run: docker build --tag idsomake .
     - name: Build
-      run: docker run --mount type=bind,source=$(pwd),target=/home/unprivileged/escapebuild --privileged idsomake all
-    - name: Zip-release
-      working-directory: release/docs
-      run: tar -cf docs.zip *
+      run: docker run --mount type=bind,source=$(pwd),target=/home/unprivileged/escapebuild --privileged idsomake docs
+    - name: Zip-docs
+      run: docker run --mount type=bind,source=$(pwd),target=/home/unprivileged/escapebuild --privileged idsomake zip-docs
     - uses: "marvinpinto/action-automatic-releases@latest"
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
