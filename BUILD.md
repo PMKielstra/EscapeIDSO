@@ -1,6 +1,6 @@
 # Building _The Team from Turtle Bay_
 
-_The Team from Turtle Bay_ requires a specific build environment, which you can create with Docker (recommended) or manually.
+_The Team from Turtle Bay_ requires a specific build environment, which you can create with Docker (the recommended way, and the way that the standard builds are produced through GitHub Actions) or manually.
 
 ## Building with Docker
 
@@ -11,7 +11,9 @@ docker build --tag 'make-turtle-bay' .
 docker run --mount type=bind,source=.,target=/home/unprivileged/escapebuild --privileged make-turtle-bay all
 ```
 
-Your built files and PDF docs are now in the `release` directory.  See the next section for details on fine-tuning.
+Your built files and PDF docs are now in the `release` directory.  Due to the fact that the build process involves running `sudo` inside a `--privileged` container, they are owned by root.  You can fix this with a `chown`, or use a VM instead, as outlined below, and build in a shared folder.  Since the hypervisor will not be running as root, the files the VM creates won't be owned by root.
+
+If you want to build just the ISOs or just the docs, you can replace `all` with `isos` or `docs`.  Once you've built the docs, you can zip them together for easy distribution by replacing `all` with `zip-docs`.
 
 ## Building with a Manually-Constructed Environment
 
@@ -39,4 +41,4 @@ Your built files and PDF docs are now in the `release` directory.  See the next 
    
    1. To just make the ISOs you can `sudo make isos`, and similarly `make docs`.
 
-3. Your built files and PDFs are now in the `release` directory.  You can distribute them however you like, or zip them for easy distribution with `make zip-release`.
+3. Your built files and PDFs are now in the `release` directory.
