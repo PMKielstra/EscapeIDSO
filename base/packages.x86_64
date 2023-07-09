@@ -1,6 +1,6 @@
 # Base packages
 base
-linux
+linux-lts
 mkinitcpio
 mkinitcpio-archiso
 syslinux
