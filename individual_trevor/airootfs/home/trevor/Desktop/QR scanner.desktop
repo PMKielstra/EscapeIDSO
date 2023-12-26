@@ -1,10 +1,10 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Name=QtQR
+Name=QR Scanner
 Comment=Scan QR codes
 Exec=python3 /home/trevor/qr/qrreader.py
-Icon=qtqr
+Icon=scanner
 Path=
 Terminal=false
 StartupNotify=false

@@ -6,7 +6,6 @@ WINDOW_TITLE = "QR Scanner"
 
 cap = cv2.VideoCapture(0)
 qr_detect = cv2.QRCodeDetector()
-
 qr_data = None
 
 while True:
