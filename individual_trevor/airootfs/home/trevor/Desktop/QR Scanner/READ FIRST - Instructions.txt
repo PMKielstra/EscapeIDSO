@@ -1,7 +1,0 @@
-Note to self:
-
-The QR scanner is extremely buggy.  Here's how you use it.
-
-When you open it, click "Decode from webcam" in the bottom right corner.  Then, you'll get to select a webcam.  There might well be two identical options in the drop-down menu.  One of them will just crash the scanner.  The other will work.  Usually it's the second one that works.  If the entire scanner just disappears after you select one and click "OK", that's the one that crashes the scanner.  Use the other one.
-
-Once you chose the right camera, a second window will pop up.  This will either show the video feed from the camera, in which case you can scan a QR code as normal, or it will show the Zbar logo (a barcode with a red Z).  Either way, the camera is now live and looking for QR codes.  Put the code you want to scan in front of the camera and the result should pop up in a text box onscreen.  It's nicer if you can see the camera video feed to make sure you're positioning the QR code correctly, but sometimes that doesn't work and you just have to guesstimate.

@@ -2,4 +2,4 @@
 tk
 
 # For scanning QR codes
-qtqr
+python-opencv
